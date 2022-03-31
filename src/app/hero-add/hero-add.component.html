@@ -1,0 +1,26 @@
+<h2> From add hero </h2>
+<div>
+    <form class="form-add">
+        <label for="new-hero-name">Hero name: </label> <br>
+        <input id="new-hero-name" #heroName placeholder="hero-name"><br>
+        <label for="hero-power-new"> Hero's power: </label><br>
+        <input name="hero-power-new" #heropower placeholder="hero-power"><br>
+        <label for="hero-gender"> Gender:
+      <label class="gender">
+         Female <input name="gender" type="radio" />
+         Male <input name="gender"  type="radio"/>
+         Other <input name="gender" type="radio" >
+      </label>
+        </label><br>
+        <label for="hero-date">Hero Date: </label><br>
+        <input type="date" id="hero-date" name="hero-birth" /><br>
+        <label for="hero-note">Information about hero: </label><br>
+        <textarea rows="6" cols="60">
+      </textarea>
+    </form>
+    <!-- (click) passes input value to add() and then clears the input -->
+    <button type="button" class="add-button" (click)="addName(heroName.value , heropower.value); heroName.value=''; heropower.value=''">
+    Add hero
+  </button>
+
+</div>
